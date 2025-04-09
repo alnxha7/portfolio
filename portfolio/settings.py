@@ -133,4 +133,4 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-EMAIL_API = ''
+EMAIL_API = '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'
