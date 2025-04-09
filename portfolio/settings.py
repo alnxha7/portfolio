@@ -133,8 +133,12 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+<<<<<<< HEAD
 from dotenv import load_dotenv()
 
 load_dotenv()
 
 EMAIL_API = os.getenv("EMAIL_API")
+=======
+EMAIL_API = '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'
+>>>>>>> 43bc285e224a2037a20a72a0e286b80ec3b9b54b
