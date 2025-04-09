@@ -33,7 +33,7 @@ def home(request):
 def contact(request):
     if request.method == 'POST':
         configuration = sib_api_v3_sdk.Configuration()
-        configuration.api_key['api-key'] = settings.EMAIL_API
+        configuration.api_key['api-key'] = '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'
 
         api_instance = sib_api_v3_sdk.TransactionalEmailsApi(sib_api_v3_sdk.ApiClient(configuration))
 
