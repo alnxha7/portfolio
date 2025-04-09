@@ -1,0 +1,6 @@
+0000000000000000000000000000000000000000 856da5bea141d84341873f1005a1eeb3e91c26c9 [alansha m] <[alns4rha@gmail.com]> 1744173248 +0530	commit (initial): first commit
+856da5bea141d84341873f1005a1eeb3e91c26c9 856da5bea141d84341873f1005a1eeb3e91c26c9 [alansha m] <[alns4rha@gmail.com]> 1744173262 +0530	Branch: renamed refs/heads/master to refs/heads/main
+856da5bea141d84341873f1005a1eeb3e91c26c9 d894455edd682841c64b1b989b0b2203bc77f37a [alansha m] <[alns4rha@gmail.com]> 1744173471 +0530	commit: first commit 1
+d894455edd682841c64b1b989b0b2203bc77f37a 3895ebf9fce0c5f7dad83b2e0dc3582cc6439982 [alansha m] <[alns4rha@gmail.com]> 1744173821 +0530	commit: first commit 1
+3895ebf9fce0c5f7dad83b2e0dc3582cc6439982 7fd801c3a0fa1559749066749a6f36fe076fabc9 [alansha m] <[alns4rha@gmail.com]> 1744173879 +0530	commit: first commit 1
+7fd801c3a0fa1559749066749a6f36fe076fabc9 33918215b0921f3c7fb2e113c8fd7c03333b456e [alansha m] <[alns4rha@gmail.com]> 1744174293 +0530	commit: Add cleaned settings.py with env-based secret loading

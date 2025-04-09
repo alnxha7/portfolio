@@ -1,0 +1,693 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="description" content="Name of your web site">
+<meta name="author" content="Marketify">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<title>ALANSHA | Portfolio</title>
+
+<!-- STYLES -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Syne:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/plugins.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/modalbox.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+<!--[if lt IE 9]> <script type="text/javascript" src="{% static 'js/modernizr.custom.js' %}"></script> <![endif]-->
+<!-- /STYLES -->
+
+<style>
+@keyframes floatEffect {
+	0% {
+		transform: translateY(0px) rotate(0deg);
+	}
+	25% {
+		transform: translateY(-6px) rotate(-1deg);
+	}
+	50% {
+		transform: translateY(2px) rotate(1deg);
+	}
+	75% {
+		transform: translateY(-4px) rotate(-1.5deg);
+	}
+	100% {
+		transform: translateY(0px) rotate(0deg);
+	}
+}
+
+.social_icons {
+	margin-top: 30px;
+}
+
+.social_icons ul {
+	list-style: none;
+	display: flex;
+	gap: 20px;
+	padding: 0;
+	justify-content: start;
+}
+
+.social_icons ul li a {
+	position: relative;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 50px;
+	font-size: 20px;
+	color: black;
+	border: 2px solid black;
+	background: white;
+	transition: 0.4s ease-in-out;
+	filter: grayscale(100%);
+	overflow: hidden;
+	animation: floatEffect 5s ease-in-out infinite;
+}
+
+.social_icons ul li:nth-child(2) a {
+	animation-delay: 0.3s;
+}
+
+.social_icons ul li:nth-child(3) a {
+	animation-delay: 0.6s;
+}
+
+.social_icons ul li:nth-child(4) a {
+	animation-delay: 0.9s;
+}
+
+.social_icons ul li a::before {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: black;
+	z-index: 0;
+	transition: 0.4s ease-in-out;
+	border-radius: 50%;
+}
+
+.social_icons ul li a i {
+	position: relative;
+	z-index: 1;
+	transition: 0.4s ease-in-out;
+}
+
+.social_icons ul li a:hover::before {
+	top: 0;
+}
+
+.social_icons ul li a:hover i {
+	color: white;
+	transform: scale(1.2) rotate(5deg);
+}
+
+.social_icons ul li a:hover {
+	transform: translateY(-5px);
+}
+	.quote_block {
+		padding: 5px;
+		border-radius: 10px;
+		font-style: italic;
+		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+	}
+
+	.quote_block blockquote {
+		margin: 0;
+		font-size: 15px;
+		color: #333;
+	}
+
+	.quote_block span {
+		display: block;
+		margin-top: 10px;
+		font-size: 13px;
+		color: #777;
+		text-align: right;
+	}
+    .mapouter {
+        text-align: center;
+        width: 100%;
+    }
+
+    .gmap_canvas {
+        background: none !important;
+        height: 500px;
+        width: 970px;
+    }
+</style>
+
+</head>
+
+<body> 
+	
+	<!-- PRELOADER -->
+	<div id="preloader">
+		<div class="loader_line"></div>
+	</div>
+	<!-- /PRELOADER -->
+	
+	<!-- WRAPPER ALL -->
+	<div class="kioto_tm_all_wrap" data-magic-cursor="show" data-enter="flipInX" data-exit=""> 
+
+		<!-- MOBILE MENU -->
+		<div class="kioto_tm_topbar">
+			<div class="topbar_inner">
+				<div class="logo" data-type="text"> <!-- You can use image or text as logo. data-type values are "image" and "text" -->
+					<a href="#">
+						<h3>ALANSHA</h3>
+					</a>
+				</div>
+				<div class="trigger">
+					<div class="hamburger hamburger--slider">
+						<div class="hamburger-box">
+							<div class="hamburger-inner"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="kioto_tm_mobile_menu">
+			<div class="menu_list">
+				<ul class="transition_link">
+					<li class="active"><a href="#home">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#portfolio">Portfolio</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- /MOBILE MENU -->
+
+		<!-- LEFTPART -->
+		<div class="leftpart">
+			<div class="leftpart_inner">
+				<div class="logo" data-type="text"> <!-- You can use image or text as logo. data-type values are: "image" and "text" -->
+					<a href="#">
+						<h3>ALANSHA</h3>
+					</a>
+				</div>
+				<div class="menu">
+					<ul class="transition_link">
+						<li class="active"><a href="#home">Home</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#portfolio">Portfolio</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</div>
+				<div class="copyright">
+					<p>&copy; 2025<br>Created by <a href="" target="_blank">Alansha</a></p>
+				</div>
+			</div>
+		</div>
+		<!-- /LEFTPART -->
+
+		<!-- RIGHTPART -->
+		<div class="rightpart">
+			<div class="rightpart_in">
+
+				<!-- HOME -->
+				<div id="home" class="kioto_tm_section animated">
+					<div class="container">
+						<div class="kioto_tm_home">
+							<div class="left">
+								<span class="name">personal portfolio</span>
+								<h3>Creative Python Developer</h3>
+								<h3 class="job">
+									<span class="cd-headline rotate-1"> <!-- ANIMATE TEXT VALUES: zoom, rotate-1, letters type, letters rotate-2, loading-bar, slide, clip, letters rotate-3, letters scale, push,  -->
+										<span class="blc">Also</span>
+										<span class="cd-words-wrapper">
+										  <b class="is-visible">AI & ML Enthusiast</b>
+										  <b>Data Science Passionate </b>
+										  <b>Web Developer</b>
+										</span>
+									</span>
+								</h3>
+								<div class="kioto_tm_button transition_link">
+									<a class="tm_text_effect" href="#portfolio">View My Projects</a>
+								</div>
+							</div>
+							<div class="right">
+								<div class="abs_image">
+									<img src="{% static 'img/alansha.jpg' %}" alt="" />
+									<div class="main" data-img-url="{% static 'img/alansha.jpg' %}"></div>
+									<div class="particle_wrapper">
+										<div id="particles-js"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /HOME -->
+
+				<!-- ABOUT -->
+				<div id="about" class="kioto_tm_section">
+					<div class="container">
+						<div class="kioto_tm_about">
+							<div class="kioto_tm_biography">
+								<div class="biography">
+									<div class="kioto_tm_title">
+										<span>Biography</span>
+									</div>
+									<div class="text">
+										<p>Hi, I'm Alansha, a passionate Python Developer with hands-on experience in Django, Flask, and Machine Learning. 
+											I`ve spent the past few years building web applications, analyzing data, and crafting smart solutions from the ground up. 
+											I love transforming ideas into scalable, efficient platforms — whether it`s a data-driven tool, a dynamic web app, or a custom backend system. 
+											My goal? To create clean, impactful, and modern digital experiences that stand out.</p>
+									</div>
+									<div class="kioto_tm_button">
+										<a class="tm_text_effect" href="{{ cv.cv.url }}" download>Download CV</a>
+									</div>
+								</div>
+								<div class="personal_details">
+									<div class="kioto_tm_title">
+										<span>Personal Details</span>
+									</div>
+									<div class="list">
+										<ul>
+											<li>
+												<span>Name:</span>
+												<span>Alansha M</span>
+											</li>
+											<li>
+												<span>Address:</span>
+												<span>Pathanapuram, Kollam, Kerala, India</span>
+											</li>
+											<li>
+												<span>Study:</span>
+												<span>Mahatma Gandhi University</span>
+											</li>
+											<li>
+												<span>Degree:</span>
+												<span>Bachelor of Computer Science</span>
+											</li>
+											<li>
+												<span>Mail:</span>
+												<span><a class="line_effect" href="#">alansha71011@gmail.com</a></span>
+											</li>
+											<li>
+												<span>Phone:</span>
+												<span><a class="line_effect" href="#">+91 9656578927</a></span>
+											</li>
+											<li>
+												<span>Freelance:</span>
+												<span>Available</span>
+											</li>
+										</ul>
+									</div>
+									<div class="social_icons">
+										<ul>
+											{% for icon in icons %}
+											<li><a href="{{ icon.link }}" target="_blank"><i class="{{ icon.class_link }}"></i></a></li>
+											{% endfor %}
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="kioto_tm_counter">
+								<div class="kioto_tm_title">
+									<span>Fun Facts</span>
+								</div>
+								<div class="list">
+									<ul>
+										<li>
+											<div class="list_inner">
+												<h3>2+</h3>
+												<span>Years of Experience</span>
+											</div>
+										</li>
+										<li>
+											<div class="list_inner">
+												<h3>45k+</h3>
+												<span>Lines of Code</span>
+											</div>
+										</li>
+										<li>
+											<div class="list_inner">
+												<h3>250+</h3>
+												<span>Drinks of Coffee</span>
+											</div>
+										</li>
+										<li>
+											<div class="list_inner">
+												<h3>100%</h3>
+												<span>Satisfaction Guarantee</span>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="kioto_tm_skills">
+								<div class="left">
+									<div class="kioto_tm_title">
+										<span>Language Skills</span>
+									</div>
+									<div class="kioto_progress">
+										{% for language in languages %}
+										<div class="progress_inner" data-value="{{ language.rate }}">
+											<span><span class="label">{{ language.language }}</span><span class="number">{{ language.rate }} %</span></span>
+											<div class="background"><div class="bar"><div class="bar_in"></div></div></div>
+										</div>
+										{% endfor %}
+									</div>
+								</div>
+								<!-- <div class="right">
+									<div class="kioto_tm_title">
+										<span> Language Skills</span>
+									</div>
+									<div class="kioto_progress">
+										<div class="progress_inner" data-value="95">
+											<span><span class="label">English</span><span class="number">95%</span></span>
+											<div class="background"><div class="bar"><div class="bar_in"></div></div></div>
+										</div>
+										<div class="progress_inner" data-value="80" >
+											<span><span class="label">Japanese</span><span class="number">80%</span></span>
+											<div class="background"><div class="bar"><div class="bar_in"></div></div></div>
+										</div>
+										<div class="progress_inner" data-value="90">
+											<span><span class="label">Arabic</span><span class="number">90%</span></span>
+											<div class="background"><div class="bar"><div class="bar_in"></div></div></div>
+										</div>
+									</div>
+								</div> -->
+							</div>
+							<div class="kioto_tm_features">
+								<div class="left">
+									<div class="kioto_tm_title">
+										<span>Skills</span>
+									</div>
+									<div class="list">
+										<ul>
+											{% for skill in skills %}
+											<li>
+												<span><label>&check;</label>{{ skill.skill }}</span>
+											</li>
+											{% endfor %}
+										</ul>
+									</div>
+								</div>
+								<div class="right">
+									<div class="kioto_tm_title">
+										<span>Awards</span>
+									</div>
+									<div class="list">
+										<ul>
+											{% for award in awards %}
+											<li>
+												<span><label>&check;</label>{{ award.name }}</span>
+											</li>
+											{% endfor %}
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="kioto_tm_timeline">
+								<div class="left">
+									<div class="kioto_tm_title">
+										<span>Education</span>
+									</div>
+									<div class="list">
+										<ul>
+											{% for education in educations %}
+											<li>
+												<div class="list_inner">
+													<div class="info">
+														<h3>{{ education.venue }}</h3>
+														<span>{{ education.degree }}</span>
+													</div>
+													<div class="year">
+														<span>{{ education.year }}</span>
+													</div>
+												</div>
+											</li>
+											{% empty %}
+											No Education Availabale
+											{% endfor %}
+										</ul>
+									</div>
+								</div>
+								<div class="right">
+									<div class="kioto_tm_title">
+										<span>Work Experience</span>
+									</div>
+									<div class="list">
+										<ul>
+											{% for experience in experiences %}
+											<li>
+												<div class="list_inner">
+													<div class="info">
+														<h3>{{ experience.company }}</h3>
+														<span>{{ experience.role }}</span>
+													</div>
+													<div class="year">
+														<span>{{ experience.year }}</span>
+													</div>
+												</div>
+											</li>
+											{% empty %}
+											No Experience Availabale
+											{% endfor %}
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /ABOUT -->
+				
+				<!-- PORTFOLIO -->
+				<div id="portfolio" class="kioto_tm_section">
+					<div class="container">
+						<div class="kioto_tm_portfolio">
+							<div class="portfolio_title">
+								<div class="kioto_tm_title">
+									<span>Creative Works</span>
+								</div>
+								<div class="portfolio_filter">
+									<ul>
+										<li><a href="#" class="current" data-filter="*">All</a></li>
+										<li><a href="#" data-filter=".production">Production Builds</a></li>
+										<li><a href="#" data-filter=".personal">Personal Works</a></li>
+										<li><a href="#" data-filter=".academic">Academic Works</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="portfolio_list">
+								<ul class="portfolio_item">
+
+									{% for production in productions %}
+									<li class="{{ production.category }}">
+										<div class="list_inner">
+											<div class="abs_image">
+												<img src="{% static 'img/thumbs/1-1.jpg' %}" alt="" />
+												<div class="main" data-img-url="{{ production.image.url }}"></div>
+												<a class="" href="{{ production.deployed_link }}" target="_blank"></a>
+											</div>
+											<div class="details">
+												<h3 class="name"><a class="" href="{{ production.deployed_link }}" target="_blank">{{ production.title }}</a></h3>
+											</div>
+										</div>
+									</li>
+									{% endfor %}
+
+									{% for personal in personals %}
+									<li class="{{ personal.category }}">
+										<div class="list_inner">
+											<div class="abs_image">
+												<img src="{% static 'img/thumbs/1-1.jpg' %}" alt="" />
+												<div class="main" data-img-url="{{ personal.image.url }}"></div>
+												<a class="" href="{{ personal.github_link }}" target="_blank"></a>
+											</div>
+											<div class="details">
+												<h3 class="name"><a class="" href="{{ personal.deployed_link }}" target="_blank">{{ personal.title }}</a></h3>
+												<span class="job"><a class="btn btn-dark btn-sm" href="{{ personal.github_link }}" style="margin-top: 10px;" target="_blank">Code</a></span>
+											</div>
+										</div>
+									</li>
+									{% endfor %}
+
+									{% for academic in academics %}
+									<li class="academic">
+										<div class="list_inner">
+											<div class="abs_image">
+												<img src="{% static 'img/thumbs/1-1.jpg' %}" alt="" />
+												<div class="main" data-img-url="{{ academic.image.url }}"></div>
+												<a class="" href="{{ academic.deployed_link }}" target="_blank"></a>
+											</div>
+											<div class="details">
+												<h3 class="name"><a class="" href="{{ academic.deployed_link }}" target="_blank">{{ academic.title }}</a></h3>
+												<span class="job"><a class="btn btn-dark btn-sm" href="{{ academic.github_link }}" style="margin-top: 10px;" target="_blank">Code</a></span>
+											</div>
+										</div>
+									</li>	
+									{% endfor %}
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /PORTFOLIO -->
+				
+				<!-- CONTACT -->
+				<div id="contact" class="kioto_tm_section">
+					<div class="container">
+						<div class="kioto_tm_contact">
+							<div class="kioto_tm_title">
+								<span>Get In Touch</span>
+							</div>
+							<div class="info_list">
+								<ul>
+									<li>
+										<div class="list_inner">
+											<img class="svg icon" src="{% static 'img/svg/location.svg' %}" alt="" />
+											<span>Pathanapuram, Kollam, Kerala</span>
+										</div>
+									</li>
+									<li>
+										<div class="list_inner">
+											<img class="svg icon" src="{% static 'img/svg/call.svg' %}" alt="" />
+											<span><a class="line_effect" href="#">+91 9656578927</a></span>
+										</div>
+									</li>
+									<li>
+										<div class="list_inner">
+											<img class="svg icon" src="{% static 'img/svg/mail-2.svg' %}" alt="" />
+											<span><a class="line_effect" href="#">alansha71011@gmail.com</a></span>
+										</div>
+									</li>
+									<li>
+										<div class="list_inner">
+											<div class="quote_block">
+												<blockquote>
+													“Code is like humor. When you have to explain it, it's bad.”<br>
+													<span>- Cory House</span>
+												</blockquote>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>	
+							<!-- Form -->
+							{% if messages %}
+							<script>
+								{% for message in messages %}
+									alert("{{ message }}");
+								{% endfor %}
+							</script>
+							{% endif %}
+							<div class="form_wrapper">
+								<form action="{% url 'contact' %}" method="post">
+									{% csrf_token %}
+									<div class="error_box" id="empty-form">
+										<p>Please Fill Required Fields</p>
+									</div>
+									<div class="error_box" id="subject-alert">
+										<p>Please Select Subject</p>
+									</div>
+									<div class="error_box" id="security-alert">
+										<p>Security code does not match !</p>
+									</div>
+									<div class="error_box" id="email-invalid">
+										<p>Please enter a valid email address. Exp. example@gmail.com</p>
+									</div>
+									<div class="error_box" id="phone-invalid">
+										<p>Please enter a valid phone number.Exp. +998991774433</p>
+									</div>
+									<div class="error_box" id="error_mail">
+										<p></p>
+									</div>
+									<div class="success_box" id="success_mail">
+										<p>Your message has been sent. We will contact you as soon as possible.</p>
+									</div>
+									<ul>
+										<li>
+											<input type="text" placeholder="Name" name="contact_name" class="cf-form-control" required/>
+											<span></span>
+										</li>
+										<li>
+											<input type="text" placeholder="Email" name="contact_email" class="cf-form-control" required />
+											<span></span>
+										</li>
+										<li>
+											<input type="text" placeholder="Phone" name="contact_phone" class="cf-form-control" required />
+											<span></span>
+										</li>
+										<li>
+											<select name="contact_subject" class="cf-form-control" required>
+												<option value="Choose Services">Choose Service</option>
+												<option value="Service">Service</option>
+												<option value="Enquiry">Enquiry</option>
+											</select>
+										</li>
+										<li id="text-area-w">
+											<textarea placeholder="Message" name="contact_message" class="cf-form-control" required></textarea>
+										</li>
+									</ul>
+									<div class="kioto_tm_button">
+										<button type="submit" class="btn btn-dark" style="color: white;">Send Message</button>
+									</div>
+								</form>
+							</div>
+							<!-- /Form -->
+							
+							<div class="my_map">
+								<div style="display: flex; justify-content: center; align-items: center; width: 100%;">
+									<div class="mapouter">
+										<div class="gmap_canvas">
+											<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d19854.955421696846!2d76.85591037641048!3d9.089096770369448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1744019668777!5m2!1sen!2sin"
+												width="1200" height="500" style="border:0;" allowfullscreen="" loading="lazy"
+												referrerpolicy="no-referrer-when-downgrade"></iframe>
+										</div>
+									</div>
+								</div>
+
+								<!--  You can get your location here https://www.embedgooglemap.net  -->
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /CONTACT -->
+
+			</div>
+		</div>
+		<!-- /RIGHTPART -->
+
+		<!-- CURSOR -->
+		<div class="mouse-cursor cursor-outer"></div>
+		<div class="mouse-cursor cursor-inner"></div>
+		<!-- /CURSOR -->
+
+	</div>
+	<!-- / WRAPPER ALL -->
+	
+<!-- SCRIPTS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/plugins.js' %}"></script>
+<script src="{% static 'js/contact.form.js' %}"></script>
+<script src="{% static 'js/init.js' %}"></script>
+<!-- /SCRIPTS -->
+
+</body>
+</html>
