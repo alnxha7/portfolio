@@ -3,7 +3,7 @@ from .models import DownloadCV, Projects, Languages, Skills, Awards, Experiences
 from sib_api_v3_sdk.rest import ApiException
 import sib_api_v3_sdk
 from django.contrib import messages
-from portfolio import settings
+from django.conf import settings
 
 def home(request):
     cv = DownloadCV.objects.filter().first()
